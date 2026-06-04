@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Era — Ristorante & Pizzeria auf der Karli in Leipzig</title>
+<meta name="description" content="Authentische italienische Küche auf der Karl-Liebknecht-Straße in Leipzig. Hausgemachte Pasta, Steinofenpizza, italienische Weine und das beste Tiramisu der Stadt.">
+<meta name="keywords" content="Italian Restaurant Leipzig, Pizza Karli Leipzig, Pasta Leipzig, Tiramisu Leipzig, Era Restaurant Leipzig, Ristorante Karl-Liebknecht-Straße">
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Era — Ristorante & Pizzeria auf der Karli in Leipzig">
+<meta property="og:description" content="Hausgemachte Pasta, Steinofenpizza & italienische Weine — im Herzen von Leipzig.">
+<meta property="og:image" content="assets/hero-pizza.jpg">
+<meta property="og:locale" content="de_DE">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Era — Ristorante & Pizzeria · Leipzig">
+<meta name="twitter:description" content="Ein Stück Italien. Mitten auf der Karli.">
+<meta name="twitter:image" content="assets/hero-pizza.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+
+<!-- JSON-LD: Restaurant -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Era Restaurant & Pizzeria",
+  "servesCuisine":"Italian",
+  "image":"assets/hero-pizza.jpg",
+  "url":"https://era-restaurant-leipzig.de",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Karl-Liebknecht-Straße 53",
+    "addressLocality":"Leipzig",
+    "postalCode":"04107",
+    "addressCountry":"DE"
+  },
+  "telephone":"+49341XXXXXX",
+  "priceRange":"€€"
+}
+</script>
+<!-- TODO: add verified "openingHours" and exact "telephone" to JSON-LD once confirmed -->
+</head>
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header">
+  <a href="#top" class="brand" aria-label="Era — Ristorante & Pizzeria">
+    <span class="name">Er<b>a</b></span>
+    <span class="sub">Ristorante &middot; Pizzeria</span>
+  </a>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <ul class="nav-links">
+      <li><a href="#cucina" data-i18n="nav.kueche">Küche</a></li>
+      <li><a href="#highlights" data-i18n="nav.menu">Speisekarte</a></li>
+      <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="#reviews" data-i18n="nav.reviews">Bewertungen</a></li>
+      <li><a href="#visit" data-i18n="nav.visit">Besuch</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <div class="lang-toggle" role="group" aria-label="Sprache / Language">
+      <button data-lang="de">DE</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="#reserve" class="btn btn-gold" data-i18n="cta.reserve">Tisch reservieren</a>
+    <button class="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#cucina" data-i18n="nav.kueche">Küche</a>
+  <a href="#highlights" data-i18n="nav.menu">Speisekarte</a>
+  <a href="#about" data-i18n="nav.about">Über uns</a>
+  <a href="#reviews" data-i18n="nav.reviews">Bewertungen</a>
+  <a href="#visit" data-i18n="nav.visit">Besuch</a>
+  <a href="#reserve" class="btn btn-gold mm-cta" data-i18n="cta.reserve">Tisch reservieren</a>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <div class="hero-bg"><video src="assets/hero-pizza.mp4" poster="assets/hero-pizza.jpg" autoplay muted loop playsinline preload="auto" aria-label="Steinofenpizza und Wein bei Kerzenlicht im Era Leipzig"></video></div>
+  <!-- VERIFY: insert exact Google review count from Maps listing before showing it -->
+  <div class="rating-pill"><span class="stars">★</span> <span data-i18n="rating">4,4 bei Google</span></div>
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="hero.eyebrow">Ristorante &amp; Pizzeria · Leipzig</span>
+    <h1 data-i18n="hero.title">Ein Stück Italien.<br>Mitten auf der <span class="gold">Karli</span>.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Hausgemachte Pasta, Steinofenpizza &amp; italienische Weine — im Herzen von Leipzig.</p>
+    <div class="hero-cta">
+      <a href="#reserve" class="btn btn-primary" data-i18n="cta.reserve">Tisch reservieren</a>
+      <a href="#highlights" class="btn btn-ghost"><span data-i18n="cta.menu">Speisekarte</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span data-i18n="scroll">Entdecken</span><span class="line"></span></div>
+</section>
+
+<!-- ============================ LA CUCINA ============================ -->
+<section class="section" id="cucina">
+  <div class="wrap">
+    <div class="cucina-head">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="cucina.eyebrow">La Cucina</span>
+        <h2 class="section-title" data-i18n="cucina.title" style="margin-top:1rem;">Was Era ausmacht</h2>
+      </div>
+      <p class="lead reveal d1" data-i18n="cucina.lead">Echte italienische Küche, ohne Schnörkel.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="num">I</span>
+        <h3 data-i18n="p1.h">Hausgemachte Pasta</h3>
+        <p data-i18n="p1.p">Frisch zubereitet, al dente, mit Liebe — so wie in Italien.</p>
+      </div>
+      <div class="pillar reveal d1">
+        <span class="num">II</span>
+        <h3 data-i18n="p2.h">Steinofenpizza</h3>
+        <p data-i18n="p2.p">Knuspriger Teig, reichhaltig belegt, aus unserem Steinofen.</p>
+      </div>
+      <div class="pillar reveal d2">
+        <span class="num">III</span>
+        <h3 data-i18n="p3.h">Italienische Weine</h3>
+        <p data-i18n="p3.p">Handverlesen, von Prosecco D.O.C. bis Barolo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HIGHLIGHTS ============================ -->
+<section class="section dark" id="highlights">
+  <div class="wrap">
+    <div class="cucina-head">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="hl.eyebrow">Unsere Highlights</span>
+        <h2 class="section-title" data-i18n="hl.title" style="margin-top:1rem;">Vom Antipasto bis zum Dolce</h2>
+      </div>
+      <p class="lead reveal d1" data-i18n="hl.note">Preise &amp; vollständige Auswahl auf unserer Speisekarte.</p>
+    </div>
+
+    <div class="hl-grid">
+      <!-- Feature: stone-oven pizza -->
+      <article class="dish feature reveal">
+        <video src="assets/pizza-tablecloth.mp4" poster="assets/pizza-tablecloth.jpg" autoplay muted loop playsinline preload="auto" aria-label="Steinofenpizza mit Kirschtomaten"></video>
+        <div class="dish-text">
+          <span class="tag" data-i18n="d3.t">Pizza</span>
+          <h3 data-i18n="d3.h">Steinofenpizza</h3>
+          <p data-i18n="d3.p">Knuspriger Rand, dünner Boden, perfekt belegt.</p>
+        </div>
+      </article>
+
+      <article class="dish reveal">
+        <img src="assets/bruschetta.jpg" alt="Bruschetta al Pomodoro" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d1.t">Antipasti</span>
+          <h3 data-i18n="d1.h">Bruschetta al Pomodoro</h3>
+          <p data-i18n="d1.p">Frisch, gut gewürzt, hübsch angerichtet.</p>
+        </div>
+      </article>
+
+      <article class="dish reveal d1">
+        <img src="assets/pizza-prosciutto.jpg" alt="Pizza mit Rohschinken und Grana" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d4.t">Pizza Speciale</span>
+          <h3 data-i18n="d4.h">Prosciutto &amp; Grana</h3>
+          <p data-i18n="d4.p">Rucola, Kirschtomaten, Rohschinken &amp; gehobelter Grana.</p>
+        </div>
+      </article>
+
+      <!-- Signature: Tiramisu (no photo — editorial card) -->
+      <article class="dish signature reveal">
+        <div class="sig-top"><span data-i18n="d5.t">Dolci</span><span class="sig-stars">★★★★★</span></div>
+        <div>
+          <h3 data-i18n="d5.h">Tiramisu</h3>
+          <p data-i18n="d5.p">Das beste Tiramisu in Leipzig. Sagen nicht wir — sagen unsere Gäste.</p>
+        </div>
+      </article>
+
+      <article class="dish reveal d1">
+        <img src="assets/pizza-verdure.jpg" alt="Pizza alle Verdure mit Gemüse" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d2.t">Dalla Griglia</span>
+          <h3 data-i18n="d2.h">Rinderfilet vom Grill</h3>
+          <p data-i18n="d2.p">Ca. 250 g, vom Grill — für den besonderen Abend.</p>
+        </div>
+      </article>
+    </div>
+    <!-- TODO: replace pizza-verdure image with a real grilled beef-fillet photo for the "Rinderfilet" card -->
+
+    <div class="hl-foot reveal">
+      <a href="https://era-restaurant-leipzig.de/speisekarte" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+        <span data-i18n="cta.fullmenu">Vollständige Speisekarte</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section olive" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy">
+        <span class="eyebrow reveal" data-i18n="about.eyebrow">Über Era</span>
+        <h2 class="section-title reveal d1" data-i18n="about.title" style="margin-top:1rem;">Neu hier — und schon ein Stammlokal</h2>
+        <p class="first reveal d1" data-i18n="about.p1">Im Era bringen wir authentische italienische Küche mitten ins Herz von Leipzig.</p>
+        <p class="reveal d2" data-i18n="about.p2">Ob ein schneller Lunch, ein Dinner zu zweit oder ein langer Abend mit Freunden — und vielleicht ein Schnäpschen aufs Haus.</p>
+      </div>
+      <div class="about-media reveal d1">
+        <img src="assets/facade.jpg" alt="Era Restaurant Außenansicht auf der Karl-Liebknecht-Straße">
+        <div class="about-quote">
+          <div class="q" data-i18n="about.q">„Zum Geburtstag gab es sogar eine Flasche Wein aufs Haus.“</div>
+          <div class="by" data-i18n="about.qby">— aus einer Gästebewertung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TODO: replace About story with real founder/owner story if client provides one -->
+
+<!-- ============================ REVIEWS ============================ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="reviews-head">
+      <span class="eyebrow center reveal" data-i18n="rev.eyebrow">Bewertungen</span>
+      <h2 class="section-title reveal d1" data-i18n="rev.title">Was unsere Gäste sagen</h2>
+      <p class="lead reveal d1" style="text-align:center" data-i18n="rev.lead">Echte Stimmen unserer Gäste auf Google.</p>
+    </div>
+    <!-- All review text is REAL (from Google research). Do not paraphrase. -->
+    <div class="reviews-grid">
+      <figure class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Beste Pizza &amp; bestes Tiramisu in Leipzig!“</p>
+        <figcaption class="who"><span class="dot">M</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+      <figure class="review reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>„Neues italienisches Restaurant in Leipzig, aber schon eines der besten. Echte italienische Küche, ausgezeichnete Desserts, bestes Tiramisu, das ich je in Leipzig gegessen habe.“</p>
+        <figcaption class="who"><span class="dot">A</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+      <figure class="review reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>„Super Personal, Schnäpschen &amp; Kaffee aufs Haus. Pizzen schmecken super, durchweg empfehlenswert.“</p>
+        <figcaption class="who"><span class="dot">S</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>„Gemütliches Ambiente, sehr leckeres Essen. Service schnell und freundlich, die Preise völlig in Ordnung. Zum Geburtstag gab es sogar noch eine Flasche Wein aufs Haus — vielen Dank!“</p>
+        <figcaption class="who"><span class="dot">K</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+      <figure class="review reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>„Pizzas und Drinks waren sehr lecker. Pizzateig super fluffig und reichhaltig belegt.“</p>
+        <figcaption class="who"><span class="dot">D</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+      <figure class="review reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>„Die Abendsonne schien auf unseren Tisch, der Service war freundlich und aufmerksam. Es gab Bruschetta zur Vorspeise — frisch, gut gewürzt — sowie Pasta und Pizza. Der Pizzateig war am Rand schön fluffig.“</p>
+        <figcaption class="who"><span class="dot">R</span><span class="meta"><b>Google-Gast</b>Leipzig</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="section dark" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="gal.eyebrow">Unser Restaurant</span>
+        <h2 class="section-title" data-i18n="gal.title" style="margin-top:1rem;">Mediterranes Flair auf der Karli</h2>
+      </div>
+      <p class="lead reveal d1" data-i18n="gal.lead">Warmes Licht, gedeckte Tische, eine gut sortierte Bar.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gphoto g-h2"><img src="assets/facade.jpg" alt="Era Außenansicht auf der Karli" loading="lazy"></div>
+      <div class="gphoto g-w2"><img src="assets/interior-wide.jpg" alt="Bar und Innenraum bei Kerzenlicht" loading="lazy"></div>
+      <div class="gphoto"><img src="assets/aperol-era.jpg" alt="Aperol Spritz vor dem Era Schriftzug" loading="lazy"></div>
+      <div class="gphoto"><img src="assets/bar-front.jpg" alt="Gut sortierte Bar im Era" loading="lazy"></div>
+      <div class="gphoto g-w2"><img src="assets/bar-angle.jpg" alt="Flaschenregal der Era Bar" loading="lazy"></div>
+      <div class="gphoto"><img src="assets/pizza-quattro.jpg" alt="Pizza Quattro Stagioni" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VISIT ============================ -->
+<section class="section olive" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="visit-info">
+        <span class="eyebrow reveal" data-i18n="visit.eyebrow">Besuch uns</span>
+        <h2 class="section-title reveal d1" data-i18n="visit.title" style="margin:1rem 0 2rem;">Wir freuen uns auf Sie</h2>
+
+        <div class="row reveal">
+          <div class="label" data-i18n="visit.addr">Adresse</div>
+          <div class="val"><a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer">Karl-Liebknecht-Straße 53, 04107 Leipzig</a></div>
+        </div>
+
+        <div class="row reveal">
+          <div class="label" data-i18n="visit.hours">Öffnungszeiten</div>
+          <div class="val" style="margin-top:.7rem">
+            <!-- TODO: verify exact opening hours on Google Maps -->
+            <div class="hours-line"><span data-i18n="h.mondo">Montag – Donnerstag</span><span>12:00 – 23:00</span></div>
+            <div class="hours-line"><span data-i18n="h.frsa">Freitag – Samstag</span><span>12:00 – 24:00</span></div>
+            <div class="hours-line"><span data-i18n="h.so">Sonntag</span><span>12:00 – 23:00</span></div>
+          </div>
+        </div>
+
+        <div class="row reveal">
+          <div class="label" data-i18n="visit.phone">Telefon</div>
+          <!-- TODO: verify phone number on Google Maps -->
+          <div class="val"><a href="tel:+49341XXXXXX">+49 341 XXX XXX</a></div>
+        </div>
+
+        <p class="visit-note reveal" data-i18n="visit.note">Reservierung empfohlen · Lieferung über Lieferando &amp; Wolt · Direkt auf der Karli.</p>
+
+        <div class="visit-cta reveal">
+          <a href="tel:+49341XXXXXX" class="btn btn-gold"><span data-i18n="cta.call">Anrufen</span></a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><span data-i18n="cta.route">Route</span></a>
+        </div>
+      </div>
+
+      <div class="map-card reveal d1">
+        <iframe
+          src="https://maps.google.com/maps?q=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig&output=embed"
+          title="Era Restaurant — Karl-Liebknecht-Straße 53, Leipzig"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESERVE ============================ -->
+<section class="section reserve" id="reserve">
+  <div class="wrap">
+    <div class="reserve-grid">
+      <div class="reserve-copy">
+        <span class="eyebrow reveal" data-i18n="res.eyebrow">Reservierung</span>
+        <h2 class="section-title reveal d1" data-i18n="res.title" style="margin-top:1rem;">Reservieren Sie Ihren Tisch</h2>
+        <p class="lead reveal d1" style="margin-top:1.2rem" data-i18n="res.lead">Rufen Sie uns an, schreiben Sie über WhatsApp — oder senden Sie uns gleich hier Ihre Anfrage.</p>
+        <div class="reserve-quick reveal d2">
+          <!-- TODO: verify phone number -->
+          <a href="tel:+49341XXXXXX" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span> · +49 341 XXX XXX</a>
+          <!-- TODO: verify WhatsApp number -->
+          <a href="https://wa.me/49341XXXXXX?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Tisch%20reservieren." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">WhatsApp</a>
+        </div>
+      </div>
+
+      <form class="res reveal d1" id="res-form" novalidate>
+        <div class="field">
+          <label for="r-name" data-i18n="f.name">Name</label>
+          <input id="r-name" name="name" type="text" autocomplete="name">
+          <div class="err" data-i18n="f.err.name">Bitte geben Sie Ihren Namen an.</div>
+        </div>
+        <div class="f-row">
+          <div class="field">
+            <label for="r-date" data-i18n="f.date">Datum</label>
+            <input id="r-date" name="date" type="date">
+            <div class="err" data-i18n="f.err.date">Bitte wählen Sie ein Datum.</div>
+          </div>
+          <div class="field">
+            <label for="r-time" data-i18n="f.time">Uhrzeit</label>
+            <input id="r-time" name="time" type="time" step="900">
+            <div class="err" data-i18n="f.err.time">Bitte wählen Sie eine Uhrzeit.</div>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="field">
+            <label for="r-guests" data-i18n="f.guests">Personen</label>
+            <select id="r-guests" name="guests">
+              <option value="" data-i18n="f.guests.ph">Anzahl wählen</option>
+              <option>1</option><option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+              <option value="9+">9+</option>
+            </select>
+            <div class="err" data-i18n="f.err.guests">Bitte wählen Sie die Personenzahl.</div>
+          </div>
+          <div class="field">
+            <label for="r-phone" data-i18n="f.phone">Telefon</label>
+            <input id="r-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="r-note" data-i18n="f.note">Anmerkung (optional)</label>
+          <textarea id="r-note" name="note" rows="2" data-i18n-ph="f.note.ph" placeholder="Allergien, Anlass, Sitzwunsch …"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="f.submit">Anfrage senden</button>
+        <p class="form-note" data-i18n="res.formnote">Diese Anfrage ist unverbindlich, bis wir sie bestätigt haben.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="brand"><span class="name">Er<b>a</b></span><span class="sub">Ristorante &middot; Pizzeria</span></div>
+        <p style="margin-top:1.1rem;max-width:30ch" data-i18n="foot.tag">Authentische italienische Küche auf der Karl-Liebknecht-Straße in Leipzig.</p>
+        <div class="foot-cta">
+          <a href="#reserve" class="btn btn-gold" data-i18n="cta.reserve">Tisch reservieren</a>
+          <a href="tel:+49341XXXXXX" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.visit">Besuch</h4>
+        <p>Karl-Liebknecht-Straße 53<br>04107 Leipzig</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="cta.route">Route</a>
+        <!-- TODO: verify phone -->
+        <a href="tel:+49341XXXXXX">+49 341 XXX XXX</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.order">Bestellen & Folgen</h4>
+        <a href="https://www.lieferando.de/speisekarte/era-restaurant" target="_blank" rel="noopener noreferrer" data-i18n="foot.deliv1">Lieferung über Lieferando</a>
+        <!-- TODO: verify exact Era Wolt link -->
+        <a href="https://wolt.com/de/deu/leipzig" target="_blank" rel="noopener noreferrer" data-i18n="foot.deliv2">Lieferung über Wolt</a>
+        <a href="https://instagram.com/era_ristorante_pizzeria_le" target="_blank" rel="noopener noreferrer">Instagram @era_ristorante_pizzeria_le</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> · <span data-i18n="foot.rights">Era · Ristorante &amp; Pizzeria · Leipzig</span></span>
+      <span>
+        <!-- TODO: link real Impressum & Datenschutz pages -->
+        <a href="#" data-i18n="foot.imprint">Impressum</a>
+        <a href="#" data-i18n="foot.privacy">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating phone (desktop) -->
+<!-- TODO: verify phone -->
+<a href="tel:+49341XXXXXX" class="fab" aria-label="Anrufen" data-i18n-al="cta.call">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<!-- Mobile action bar -->
+<nav class="mobile-bar" aria-label="Schnellaktionen">
+  <a href="tel:+49341XXXXXX">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span data-i18n="cta.call">Anrufen</span>
+  </a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span data-i18n="cta.route">Route</span>
+  </a>
+  <a href="#reserve" class="accent">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <span data-i18n="cta.reserveShort">Reservieren</span>
+  </a>
+</nav>
+
+<script src="assets/app.js"></script>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
