@@ -40,7 +40,8 @@
     "postalCode":"04107",
     "addressCountry":"DE"
   },
-  "telephone":"+49341XXXXXX",
+  "telephone":"+491779666081",
+  "openingHours":"Tu-Su 16:00-23:00",
   "priceRange":"€€"
 }
 </script>
@@ -96,6 +97,7 @@
       <a href="#reserve" class="btn btn-primary" data-i18n="cta.reserve">Tisch reservieren</a>
       <a href="#highlights" class="btn btn-ghost"><span data-i18n="cta.menu">Speisekarte</span></a>
     </div>
+    <div class="cta-urgency"><span class="pulse-dot"></span><span data-i18n="urg.hero">Nur für kurze Zeit · Aktion läuft</span></div>
   </div>
   <div class="scroll-hint"><span data-i18n="scroll">Entdecken</span><span class="line"></span></div>
 </section>
@@ -162,6 +164,15 @@
       </article>
 
       <article class="dish reveal d1">
+        <img src="assets/steak.jpg" alt="Rinderfilet vom Grill mit Bratkartoffeln und Spinat" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d2.t">Dalla Griglia</span>
+          <h3 data-i18n="d2.h">Rinderfilet vom Grill</h3>
+          <p data-i18n="d2.p">Ca. 250 g, vom Grill — für den besonderen Abend.</p>
+        </div>
+      </article>
+
+      <article class="dish reveal">
         <img src="assets/pizza-prosciutto.jpg" alt="Pizza mit Rohschinken und Grana" loading="lazy">
         <div class="dish-text">
           <span class="tag" data-i18n="d4.t">Pizza Speciale</span>
@@ -170,25 +181,25 @@
         </div>
       </article>
 
-      <!-- Signature: Tiramisu (no photo — editorial card) -->
-      <article class="dish signature reveal">
-        <div class="sig-top"><span data-i18n="d5.t">Dolci</span><span class="sig-stars">★★★★★</span></div>
-        <div>
+      <article class="dish reveal d1">
+        <img src="assets/pizza-quattro.jpg" alt="Pizza Quattro Stagioni" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d6.t">Pizzeria</span>
+          <h3 data-i18n="d6.h">Quattro Stagioni</h3>
+          <p data-i18n="d6.p">Vier Jahreszeiten auf einer Pizza — der Klassiker.</p>
+        </div>
+      </article>
+
+      <!-- Dolce finale: Tiramisù (real photo, full-width climax) -->
+      <article class="dish feature signature-photo reveal">
+        <img src="assets/tiramisu.jpg" alt="Hausgemachtes Tiramisu mit Kakao bestäubt" loading="lazy">
+        <div class="dish-text">
+          <span class="tag" data-i18n="d5.t">Dolci · ★★★★★</span>
           <h3 data-i18n="d5.h">Tiramisu</h3>
           <p data-i18n="d5.p">Das beste Tiramisu in Leipzig. Sagen nicht wir — sagen unsere Gäste.</p>
         </div>
       </article>
-
-      <article class="dish reveal d1">
-        <img src="assets/pizza-verdure.jpg" alt="Pizza alle Verdure mit Gemüse" loading="lazy">
-        <div class="dish-text">
-          <span class="tag" data-i18n="d2.t">Dalla Griglia</span>
-          <h3 data-i18n="d2.h">Rinderfilet vom Grill</h3>
-          <p data-i18n="d2.p">Ca. 250 g, vom Grill — für den besonderen Abend.</p>
-        </div>
-      </article>
     </div>
-    <!-- TODO: replace pizza-verdure image with a real grilled beef-fillet photo for the "Rinderfilet" card -->
 
     <div class="hl-foot reveal">
       <a href="speisekarte.html" class="btn btn-gold">
@@ -281,7 +292,7 @@
       <div class="gphoto"><img src="assets/aperol-era.jpg" alt="Aperol Spritz vor dem Era Schriftzug" loading="lazy"></div>
       <div class="gphoto"><img src="assets/bar-front.jpg" alt="Gut sortierte Bar im Era" loading="lazy"></div>
       <div class="gphoto g-w2"><img src="assets/bar-angle.jpg" alt="Flaschenregal der Era Bar" loading="lazy"></div>
-      <div class="gphoto"><img src="assets/pizza-quattro.jpg" alt="Pizza Quattro Stagioni" loading="lazy"></div>
+      <div class="gphoto"><img src="assets/pizza-verdure.jpg" alt="Pizza alle Verdure mit Gemüse" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -302,23 +313,20 @@
         <div class="row reveal">
           <div class="label" data-i18n="visit.hours">Öffnungszeiten</div>
           <div class="val" style="margin-top:.7rem">
-            <!-- TODO: verify exact opening hours on Google Maps -->
-            <div class="hours-line"><span data-i18n="h.mondo">Montag – Donnerstag</span><span>12:00 – 23:00</span></div>
-            <div class="hours-line"><span data-i18n="h.frsa">Freitag – Samstag</span><span>12:00 – 24:00</span></div>
-            <div class="hours-line"><span data-i18n="h.so">Sonntag</span><span>12:00 – 23:00</span></div>
+            <div class="hours-line"><span data-i18n="h.days">Dienstag – Sonntag</span><span data-i18n="h.open">16:00 – 23:00</span></div>
+            <div class="hours-line"><span data-i18n="h.closedday">Montag</span><span data-i18n="h.closed">Geschlossen</span></div>
           </div>
         </div>
 
         <div class="row reveal">
           <div class="label" data-i18n="visit.phone">Telefon</div>
-          <!-- TODO: verify phone number on Google Maps -->
-          <div class="val"><a href="tel:+49341XXXXXX">+49 341 XXX XXX</a></div>
+          <div class="val"><a href="tel:+491779666081">0177 9666081</a></div>
         </div>
 
         <p class="visit-note reveal" data-i18n="visit.note">Reservierung empfohlen · Lieferung über Lieferando &amp; Wolt · Direkt auf der Karli.</p>
 
         <div class="visit-cta reveal">
-          <a href="tel:+49341XXXXXX" class="btn btn-gold"><span data-i18n="cta.call">Anrufen</span></a>
+          <a href="tel:+491779666081" class="btn btn-gold"><span data-i18n="cta.call">Anrufen</span></a>
           <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><span data-i18n="cta.route">Route</span></a>
         </div>
       </div>
@@ -336,17 +344,26 @@
 <!-- ============================ RESERVE ============================ -->
 <section class="section reserve" id="reserve">
   <div class="wrap">
+    <div class="promo-strip reveal" style="margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <div class="ps-main">
+        <span class="ps-badge"><span class="pulse-dot"></span><span data-i18n="strip.badge">Aktion</span></span>
+        <h3 data-i18n="strip.title">Reservieren &amp; genießen — Schnäpschen aufs Haus</h3>
+        <p class="ps-text" data-i18n="strip.text">Nur für kurze Zeit. Sichern Sie sich Ihren Tisch, bevor die Aktion endet.</p>
+      </div>
+      <div class="ps-cta">
+        <a href="tel:+491779666081" class="btn btn-gold"><span data-i18n="strip.cta">Jetzt sichern</span></a>
+      </div>
+    </div>
     <div class="reserve-grid">
       <div class="reserve-copy">
         <span class="eyebrow reveal" data-i18n="res.eyebrow">Reservierung</span>
         <h2 class="section-title reveal d1" data-i18n="res.title" style="margin-top:1rem;">Reservieren Sie Ihren Tisch</h2>
         <p class="lead reveal d1" style="margin-top:1.2rem" data-i18n="res.lead">Rufen Sie uns an, schreiben Sie über WhatsApp — oder senden Sie uns gleich hier Ihre Anfrage.</p>
         <div class="reserve-quick reveal d2">
-          <!-- TODO: verify phone number -->
-          <a href="tel:+49341XXXXXX" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span> · +49 341 XXX XXX</a>
-          <!-- TODO: verify WhatsApp number -->
-          <a href="https://wa.me/49341XXXXXX?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Tisch%20reservieren." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">WhatsApp</a>
+                    <a href="tel:+491779666081" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span> · 0177 9666081</a>
+                    <a href="https://wa.me/491779666081?text=Hallo%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Tisch%20reservieren." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">WhatsApp</a>
         </div>
+        <div class="cta-urgency reveal d2"><span class="pulse-dot"></span><span data-i18n="urg.reserve">Aktion endet bald — jetzt sichern</span></div>
       </div>
 
       <form class="res reveal d1" id="res-form" novalidate>
@@ -403,15 +420,14 @@
         <p style="margin-top:1.1rem;max-width:30ch" data-i18n="foot.tag">Authentische italienische Küche auf der Karl-Liebknecht-Straße in Leipzig.</p>
         <div class="foot-cta">
           <a href="#reserve" class="btn btn-gold" data-i18n="cta.reserve">Tisch reservieren</a>
-          <a href="tel:+49341XXXXXX" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span></a>
+          <a href="tel:+491779666081" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span></a>
         </div>
       </div>
       <div class="footer-col">
         <h4 data-i18n="foot.visit">Besuch</h4>
         <p>Karl-Liebknecht-Straße 53<br>04107 Leipzig</p>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="cta.route">Route</a>
-        <!-- TODO: verify phone -->
-        <a href="tel:+49341XXXXXX">+49 341 XXX XXX</a>
+                <a href="tel:+491779666081">0177 9666081</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="foot.order">Bestellen & Folgen</h4>
@@ -432,15 +448,33 @@
   </div>
 </footer>
 
+<!-- ============================ PROMO MODAL (funnel) ============================ -->
+<!-- TODO: when the client sends the promo details, update promo.title / promo.text / promo.badge in assets/app.js -->
+<div class="promo" id="promo" role="dialog" aria-modal="true" aria-label="Aktion">
+  <div class="promo-card">
+    <button class="promo-close" id="promoClose" aria-label="Schließen">&times;</button>
+    <div class="promo-media"><img src="assets/tiramisu.jpg" alt=""></div>
+    <div class="promo-body">
+      <span class="promo-badge" data-i18n="promo.badge">Nur für kurze Zeit</span>
+      <span class="eyebrow" data-i18n="promo.eyebrow">Aktion</span>
+      <h3 data-i18n="promo.title">Reservieren &amp; genießen</h3>
+      <p data-i18n="promo.text">Sichern Sie sich Ihren Tisch auf der Karli — und lassen Sie sich von unserer Küche verwöhnen.</p>
+      <div class="promo-actions">
+        <a href="#reserve" class="btn btn-primary" id="promoCta" data-i18n="promo.cta">Jetzt Tisch sichern</a>
+        <button class="promo-dismiss" id="promoDismiss" data-i18n="promo.dismiss">Vielleicht später</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Floating phone (desktop) -->
-<!-- TODO: verify phone -->
-<a href="tel:+49341XXXXXX" class="fab" aria-label="Anrufen" data-i18n-al="cta.call">
+<a href="tel:+491779666081" class="fab" aria-label="Anrufen" data-i18n-al="cta.call">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 </a>
 
 <!-- Mobile action bar -->
 <nav class="mobile-bar" aria-label="Schnellaktionen">
-  <a href="tel:+49341XXXXXX">
+  <a href="tel:+491779666081">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     <span data-i18n="cta.call">Anrufen</span>
   </a>
