@@ -4,11 +4,9 @@
    ============================================================ */
 
 /* ---- TODO: verify & insert real contact data --------------- */
-/* <!-- TODO: verify phone on Google Maps --> */
-const PHONE_DISPLAY = "+49 341 XXX XXX";          // TODO verify
-const PHONE_TEL     = "+49341XXXXXX";             // TODO verify
-/* <!-- TODO: verify WhatsApp number with owner --> */
-const WHATSAPP      = "49341XXXXXX";              // TODO verify
+const PHONE_DISPLAY = "0177 9666081";
+const PHONE_TEL     = "+491779666081";
+const WHATSAPP      = "491779666081";
 const MAPS_DIR      = "https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig";
 const LIEFERANDO    = "https://www.lieferando.de/speisekarte/era-restaurant";
 const WOLT          = "https://wolt.com/de/deu/leipzig";   /* TODO verify exact Era Wolt link */
@@ -32,6 +30,13 @@ const I18N = {
     "hero.title":'Ein Stück Italien.<br>Mitten auf der <span class="gold">Karli</span>.',
     "hero.sub":"Hausgemachte Pasta, Steinofenpizza & italienische Weine — im Herzen von Leipzig.",
     "scroll":"Entdecken",
+    "promo.eyebrow":"Aktion","promo.title":"Reservieren &amp; genießen",
+    "promo.text":"Sichern Sie sich Ihren Tisch auf der Karli — und lassen Sie sich von unserer Küche verwöhnen. Ein Schnäpschen aufs Haus inklusive.",
+    "promo.cta":"Jetzt Tisch sichern","promo.dismiss":"Vielleicht später","promo.badge":"Nur für kurze Zeit",
+    "strip.badge":"Aktion","strip.title":"Reservieren &amp; genießen — Schnäpschen aufs Haus",
+    "strip.text":"Nur für kurze Zeit. Sichern Sie sich Ihren Tisch, bevor die Aktion endet.",
+    "strip.cta":"Jetzt sichern",
+    "urg.hero":"Nur für kurze Zeit · Aktion läuft","urg.reserve":"Aktion endet bald — jetzt sichern",
 
     "cucina.eyebrow":"La Cucina","cucina.title":"Was Era ausmacht",
     "cucina.lead":"Echte italienische Küche, ohne Schnörkel — frisch zubereitet, ehrlich serviert, mit der Gastfreundschaft eines Hauses, das seinen Gast beim zweiten Besuch beim Namen kennt.",
@@ -44,7 +49,8 @@ const I18N = {
     "d2.t":"Dalla Griglia","d2.h":"Rinderfilet vom Grill","d2.p":"Ca. 250 g, vom Grill — für den besonderen Abend.",
     "d3.t":"Pizza","d3.h":"Steinofenpizza","d3.p":"Knuspriger Rand, dünner Boden, perfekt belegt.",
     "d4.t":"Pizza Speciale","d4.h":"Prosciutto & Grana","d4.p":"Rucola, Kirschtomaten, Rohschinken & gehobelter Grana.",
-    "d5.t":"Dolci","d5.h":"Tiramisu","d5.p":"Das beste Tiramisu in Leipzig. Sagen nicht wir — sagen unsere Gäste.",
+    "d5.t":"Dolci · ★★★★★","d5.h":"Tiramisu","d5.p":"Das beste Tiramisu in Leipzig. Sagen nicht wir — sagen unsere Gäste.",
+    "d6.t":"Pizzeria","d6.h":"Quattro Stagioni","d6.p":"Vier Jahreszeiten auf einer Pizza — der Klassiker.",
     "hl.note":"Preise & vollständige Auswahl auf unserer Speisekarte.",
 
     "about.eyebrow":"Über Era","about.title":"Neu hier — und schon ein Stammlokal",
@@ -60,8 +66,8 @@ const I18N = {
 
     "visit.eyebrow":"Besuch uns","visit.title":"Wir freuen uns auf Sie",
     "visit.addr":"Adresse","visit.hours":"Öffnungszeiten","visit.phone":"Telefon","visit.find":"So finden Sie uns",
-    "h.mondo":"Montag – Donnerstag","h.frsa":"Freitag – Samstag","h.so":"Sonntag",
-    "visit.note":"Reservierung empfohlen · Lieferung über Lieferando & Wolt · Direkt auf der Karli.<br><span style=\"opacity:.7\">* Öffnungszeiten werden noch bestätigt.</span>",
+    "h.days":"Dienstag – Sonntag","h.open":"16:00 – 23:00","h.closedday":"Montag","h.closed":"Geschlossen",
+    "visit.note":"Reservierung empfohlen · Lieferung über Lieferando & Wolt · Direkt auf der Karli.",
 
     "res.eyebrow":"Reservierung","res.title":"Reservieren Sie Ihren Tisch",
     "res.lead":"Rufen Sie uns an, schreiben Sie über WhatsApp — oder senden Sie uns gleich hier Ihre Anfrage.",
@@ -93,6 +99,13 @@ const I18N = {
     "hero.title":'A piece of Italy.<br>Right on the <span class="gold">Karli</span>.',
     "hero.sub":"Homemade pasta, stone-oven pizza & Italian wines — in the heart of Leipzig.",
     "scroll":"Discover",
+    "promo.eyebrow":"Offer","promo.title":"Reserve &amp; enjoy",
+    "promo.text":"Secure your table on the Karli — and let our kitchen spoil you. A little shot on the house included.",
+    "promo.cta":"Reserve your table","promo.dismiss":"Maybe later","promo.badge":"Limited time",
+    "strip.badge":"Offer","strip.title":"Reserve &amp; enjoy — a shot on the house",
+    "strip.text":"Limited time only. Secure your table before the offer ends.",
+    "strip.cta":"Claim it now",
+    "urg.hero":"Limited time · Offer running","urg.reserve":"Offer ends soon — claim it now",
 
     "cucina.eyebrow":"La Cucina","cucina.title":"What makes Era different",
     "cucina.lead":"Real Italian cooking, no frills — freshly made, honestly served, with the hospitality of a place that knows your name by your second visit.",
@@ -105,7 +118,8 @@ const I18N = {
     "d2.t":"From the Grill","d2.h":"Grilled Beef Fillet","d2.p":"Approx. 250 g, from the grill — for that special evening.",
     "d3.t":"Pizza","d3.h":"Stone-Oven Pizza","d3.p":"Crispy crust, thin base, perfectly topped.",
     "d4.t":"Pizza Speciale","d4.h":"Prosciutto & Grana","d4.p":"Rocket, cherry tomatoes, cured ham & shaved Grana.",
-    "d5.t":"Dolci","d5.h":"Tiramisu","d5.p":"The best Tiramisu in Leipzig. Don't take our word — take our guests'.",
+    "d5.t":"Dolci · ★★★★★","d5.h":"Tiramisu","d5.p":"The best Tiramisu in Leipzig. Don't take our word — take our guests'.",
+    "d6.t":"Pizzeria","d6.h":"Quattro Stagioni","d6.p":"Four seasons on one pizza — the classic.",
     "hl.note":"Prices & full selection on our menu.",
 
     "about.eyebrow":"About Era","about.title":"New here — already a regular's place",
@@ -121,8 +135,8 @@ const I18N = {
 
     "visit.eyebrow":"Visit Us","visit.title":"We look forward to seeing you",
     "visit.addr":"Address","visit.hours":"Opening Hours","visit.phone":"Phone","visit.find":"How to find us",
-    "h.mondo":"Monday – Thursday","h.frsa":"Friday – Saturday","h.so":"Sunday",
-    "visit.note":"Reservations recommended · Delivery via Lieferando & Wolt · Right on the Karli.<br><span style=\"opacity:.7\">* Opening hours to be confirmed.</span>",
+    "h.days":"Tuesday – Sunday","h.open":"16:00 – 23:00","h.closedday":"Monday","h.closed":"Closed",
+    "visit.note":"Reservations recommended · Delivery via Lieferando & Wolt · Right on the Karli.",
 
     "res.eyebrow":"Reservation","res.title":"Reserve your table",
     "res.lead":"Call us, message us on WhatsApp — or send your request right here.",
@@ -203,7 +217,27 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   initLightbox();
   initForm();
+  initPromo();
 });
+
+/* ============================================================
+   Promo modal (funnel) — appears shortly after load, once per visit
+   ============================================================ */
+function initPromo(){
+  const promo = document.getElementById("promo");
+  if(!promo) return;
+  const open = ()=>{ promo.classList.add("open"); };
+  const close = ()=>{ promo.classList.remove("open"); sessionStorage.setItem("era_promo_seen","1"); };
+
+  if(!sessionStorage.getItem("era_promo_seen")){
+    setTimeout(open, 4500);
+  }
+  document.getElementById("promoClose").addEventListener("click", close);
+  document.getElementById("promoDismiss").addEventListener("click", close);
+  document.getElementById("promoCta").addEventListener("click", close);
+  promo.addEventListener("click", e=>{ if(e.target===promo) close(); });
+  document.addEventListener("keydown", e=>{ if(e.key==="Escape" && promo.classList.contains("open")) close(); });
+}
 
 /* ============================================================
    Lightbox gallery
