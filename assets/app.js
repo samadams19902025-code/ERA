@@ -20,6 +20,9 @@ const MENU_URL      = "https://era-restaurant-leipzig.de/speisekarte"; /* existi
    ============================================================ */
 const I18N = {
   de:{
+    "bar.text":"🍷 Tisch reservieren & ein Schnäpschen aufs Haus beim ersten Besuch",
+    "bar.cta":"Reservieren",
+    "bar.close":"Schließen",
     "nav.kueche":"Küche","nav.menu":"Speisekarte","nav.about":"Über uns",
     "nav.reviews":"Bewertungen","nav.visit":"Besuch",
     "cta.reserve":"Tisch reservieren","cta.menu":"Speisekarte","cta.call":"Anrufen",
@@ -78,6 +81,9 @@ const I18N = {
     "foot.rights":"Era · Ristorante & Pizzeria · Leipzig"
   },
   en:{
+    "bar.text":"🍷 Reserve a table & enjoy a drink on the house on your first visit",
+    "bar.cta":"Reserve",
+    "bar.close":"Close",
     "nav.kueche":"Kitchen","nav.menu":"Menu","nav.about":"About",
     "nav.reviews":"Reviews","nav.visit":"Visit",
     "cta.reserve":"Reserve a Table","cta.menu":"See the Menu","cta.call":"Call",
@@ -165,6 +171,7 @@ function applyLang(lang){
    Init
    ============================================================ */
 document.addEventListener("DOMContentLoaded", ()=>{
+  initPromoBar();
   applyLang(LANG);
 
   /* Language toggle */
@@ -303,5 +310,23 @@ function initForm(){
           <a class="btn btn-ghost" style="justify-content:center" href="tel:${PHONE_TEL}">${dict["res.ok.call"]} · ${PHONE_DISPLAY}</a>
         </div>
       </div>`;
+  });
+}
+
+
+/* ---------- Promo top bar ---------- */
+function initPromoBar(){
+  if(localStorage.getItem("era_promobar")==="closed"){ document.body.classList.add("pb-hidden"); document.documentElement.style.setProperty("--bar-h","0px"); return; }
+  const bar=document.createElement("div"); bar.id="promobar";
+  bar.innerHTML='<span class="pb-txt" data-i18n="bar.text"></span>'
+    +'<a class="pb-cta" href="index.html#reserve" data-i18n="bar.cta"></a>'
+    +'<button class="pb-close" aria-label="Close" data-i18n-al="bar.close">&times;</button>';
+  document.body.prepend(bar);
+  const setH=()=>document.documentElement.style.setProperty("--bar-h", bar.offsetHeight+"px");
+  setH(); window.addEventListener("resize", setH, {passive:true});
+  bar.querySelector(".pb-close").addEventListener("click", ()=>{
+    document.body.classList.add("pb-hidden");
+    document.documentElement.style.setProperty("--bar-h","0px");
+    localStorage.setItem("era_promobar","closed");
   });
 }

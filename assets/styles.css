@@ -30,10 +30,11 @@
   --shadow:0 24px 60px -28px rgba(32,40,31,.5);
   --shadow-soft:0 18px 44px -24px rgba(32,40,31,.42);
   --r:14px;
+  --bar-h:44px;
 }
 
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + var(--bar-h));-webkit-text-size-adjust:100%;}
 body{
   margin:0;
   font-family:var(--sans);
@@ -100,7 +101,7 @@ em.it{font-style:italic;color:var(--terracotta);}
 
 /* ---------- Header ---------- */
 .header{
-  position:fixed;top:0;left:0;right:0;z-index:60;
+  position:fixed;top:var(--bar-h);left:0;right:0;z-index:60;
   display:flex;align-items:center;justify-content:space-between;
   padding:.85rem var(--pad);
   background:rgba(32,40,31,0);
@@ -345,4 +346,27 @@ form.res .btn{width:100%;justify-content:center;margin-top:.5rem;}
   body{padding-bottom:58px;}
   .scroll-hint{display:none;}
   .rating-pill{top:auto;right:var(--pad);}
+}
+
+
+/* ---------- Promo top bar (welcome promo) ---------- */
+#promobar{position:fixed;top:0;left:0;right:0;z-index:80;
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+  background:linear-gradient(90deg,var(--terracotta),var(--terracotta-deep));
+  color:#fff;font-family:var(--sans);font-size:.88rem;font-weight:500;
+  padding:.55rem 2.6rem;text-align:center;line-height:1.3;box-shadow:0 1px 0 rgba(0,0,0,.18);}
+#promobar .pb-cta{flex:0 0 auto;background:var(--gold);color:var(--olive-deep);
+  font-weight:700;padding:.3rem .85rem;border-radius:999px;font-size:.8rem;white-space:nowrap;}
+#promobar .pb-cta:hover{background:var(--gold-soft);transform:translateY(-1px);}
+#promobar .pb-close{position:absolute;right:.7rem;top:50%;transform:translateY(-50%);
+  color:#fff;font-size:1.35rem;line-height:1;opacity:.85;background:none;border:none;cursor:pointer;}
+#promobar .pb-close:hover{opacity:1;}
+body.pb-hidden #promobar{display:none;}
+.menu-page{padding-top:calc(96px + var(--bar-h)) !important;}
+.legal-page{padding-top:calc(96px + var(--bar-h)) !important;}
+.cat-nav{top:calc(64px + var(--bar-h)) !important;}
+.rating-pill{top:calc(var(--pad) + 70px + var(--bar-h)) !important;}
+@media(max-width:600px){
+  #promobar{font-size:.78rem;gap:.6rem;padding:.5rem 2.2rem;}
+  #promobar .pb-cta{padding:.26rem .7rem;font-size:.74rem;}
 }
