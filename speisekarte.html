@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speisekarte — Era Ristorante & Pizzeria · Leipzig</title>
+<meta name="description" content="Die vollständige Speisekarte des Era — Vorspeisen, Pizza, Pasta, Fleisch- und Fischgerichte, Dolci, Weine. Italienisches Restaurant auf der Karli in Leipzig.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ---- Menu page ---- */
+.menu-page{padding-top:96px;}
+.menu-hero{background:var(--olive-deep);color:var(--cream);text-align:center;
+  padding:clamp(2.6rem,6vw,4.4rem) var(--pad) clamp(2.2rem,5vw,3.4rem);}
+.menu-hero .eyebrow{color:var(--gold-soft);justify-content:center;}
+.menu-hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:.8rem 0;color:var(--cream);}
+.menu-hero .lead{color:var(--muted-light);margin:0 auto;max-width:60ch;}
+.cat-nav{position:sticky;top:64px;z-index:30;background:rgba(245,239,230,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.cat-nav .wrap{display:flex;gap:.55rem;overflow-x:auto;padding:.7rem var(--pad);
+  scrollbar-width:none;}
+.cat-nav .wrap::-webkit-scrollbar{display:none;}
+.cat-nav a{flex:0 0 auto;font-family:var(--sans);font-size:.78rem;font-weight:600;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--muted);
+  padding:.42rem .85rem;border:1px solid var(--line);border-radius:999px;
+  white-space:nowrap;transition:.2s;}
+.cat-nav a:hover{color:var(--ink);border-color:var(--gold);background:#fff;}
+.menu-body{max-width:980px;margin:0 auto;padding:clamp(2.4rem,6vw,4rem) var(--pad) 1rem;}
+.msec{margin:0 0 clamp(2.4rem,5vw,3.4rem);scroll-margin-top:130px;}
+.msec-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  border-bottom:2px solid var(--gold);padding-bottom:.5rem;margin-bottom:1.3rem;}
+.msec-head h2{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.4rem);
+  color:var(--olive-deep);letter-spacing:.01em;}
+.msec-head .ital{font-family:var(--serif);font-style:italic;color:var(--terracotta);
+  font-size:clamp(1rem,1.8vw,1.25rem);font-weight:500;white-space:nowrap;}
+.mmeta{font-style:italic;color:var(--muted);margin:-.6rem 0 1.1rem;font-size:.95rem;}
+.mitems{display:grid;grid-template-columns:1fr;gap:1rem 3rem;}
+.msec.two .mitems{grid-template-columns:1fr 1fr;}
+.mitem{break-inside:avoid;}
+.mitem .row{display:flex;align-items:baseline;gap:.5rem;}
+.mitem .nm{font-family:var(--serif);font-size:1.18rem;font-weight:600;color:var(--ink);}
+.mitem .dot{flex:1;border-bottom:1px dotted var(--muted);transform:translateY(-3px);opacity:.5;}
+.mitem .pr{font-family:var(--sans);font-weight:700;color:var(--terracotta);
+  white-space:nowrap;font-size:1rem;}
+.mitem .ds{color:var(--muted);font-size:.95rem;line-height:1.45;margin-top:.12rem;
+  max-width:64ch;}
+.mnote{font-style:italic;color:var(--muted);font-size:.95rem;margin-top:1rem;}
+.menu-foot{max-width:980px;margin:0 auto;padding:1rem var(--pad) clamp(2.6rem,6vw,4rem);
+  text-align:center;}
+.menu-foot .alg{color:var(--muted);font-size:.86rem;}
+.menu-foot .back{margin-top:1.4rem;}
+@media(max-width:720px){
+  .msec.two .mitems{grid-template-columns:1fr;}
+  .cat-nav{top:60px;}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html#top" class="brand" aria-label="Era — Ristorante & Pizzeria">
+    <span class="name">Er<b>a</b></span>
+    <span class="sub">Ristorante &middot; Pizzeria</span>
+  </a>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <ul class="nav-links">
+      <li><a href="index.html#cucina" data-i18n="nav.kueche">Küche</a></li>
+      <li><a href="speisekarte.html" class="active" data-i18n="nav.menu">Speisekarte</a></li>
+      <li><a href="index.html#about" data-i18n="nav.about">Über uns</a></li>
+      <li><a href="index.html#reviews" data-i18n="nav.reviews">Bewertungen</a></li>
+      <li><a href="index.html#visit" data-i18n="nav.visit">Besuch</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <div class="lang-toggle" role="group" aria-label="Sprache / Language">
+      <button data-lang="de">DE</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="index.html#reserve" class="btn btn-gold" data-i18n="cta.reserve">Tisch reservieren</a>
+    <button class="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#cucina" data-i18n="nav.kueche">Küche</a>
+  <a href="speisekarte.html" data-i18n="nav.menu">Speisekarte</a>
+  <a href="index.html#about" data-i18n="nav.about">Über uns</a>
+  <a href="index.html#reviews" data-i18n="nav.reviews">Bewertungen</a>
+  <a href="index.html#visit" data-i18n="nav.visit">Besuch</a>
+  <a href="index.html#reserve" class="btn btn-gold mm-cta" data-i18n="cta.reserve">Tisch reservieren</a>
+</div>
+
+<main class="menu-page">
+  <div class="menu-hero">
+    <span class="eyebrow" data-mui="eyebrow">La Carta</span>
+    <h1 data-mui="title">Speisekarte</h1>
+    <p class="lead" data-mui="lead"></p>
+  </div>
+  <div class="cat-nav"><div class="wrap" id="catNav"></div></div>
+  <div class="menu-body" id="menuBody"></div>
+  <div class="menu-foot">
+    <p class="alg"></p>
+    <div class="back"><a href="index.html#top" class="btn btn-ghost" data-mui="back">Zurück zur Startseite</a></div>
+  </div>
+</main>
+
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="brand"><span class="name">Er<b>a</b></span><span class="sub">Ristorante &middot; Pizzeria</span></div>
+        <p style="margin-top:1.1rem;max-width:30ch" data-i18n="foot.tag">Authentische italienische Küche auf der Karl-Liebknecht-Straße in Leipzig.</p>
+        <div class="foot-cta">
+          <a href="index.html#reserve" class="btn btn-gold" data-i18n="cta.reserve">Tisch reservieren</a>
+          <a href="tel:+491779666081" class="btn btn-ghost"><span data-i18n="cta.call">Anrufen</span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.visit">Besuch</h4>
+        <p>Karl-Liebknecht-Straße 53<br>04107 Leipzig</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Era+Restaurant+Karl-Liebknecht-Stra%C3%9Fe+53+04107+Leipzig" target="_blank" rel="noopener noreferrer" data-i18n="cta.route">Route</a>
+        <a href="tel:+491779666081">0177 9666081</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="foot.order">Bestellen & Folgen</h4>
+        <a href="https://www.lieferando.de/speisekarte/era-restaurant" target="_blank" rel="noopener noreferrer" data-i18n="foot.deliv1">Lieferung über Lieferando</a>
+        <a href="https://wolt.com/de/deu/leipzig" target="_blank" rel="noopener noreferrer" data-i18n="foot.deliv2">Lieferung über Wolt</a>
+        <a href="https://instagram.com/era_ristorante_pizzeria_le" target="_blank" rel="noopener noreferrer">Instagram @era_ristorante_pizzeria_le</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> · <span data-i18n="foot.rights">Era · Ristorante &amp; Pizzeria · Leipzig</span></span>
+      <span>
+        <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
+        <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+const MENU = [{"id": "antipasti", "it": "Antipasti", "de": "Vorspeisen", "en": "Starters", "meta": {}, "two": false, "wine": false, "items": [{"n": "Bruschetta Classica", "de": "Tomatenwürfel, Knoblauch und Basilikum", "en": "Diced tomato, garlic and basil", "p": "6,00"}, {"n": "Mozzarella di Bufala D.O.P. e Pomodori", "de": "Büffelmozzarella DOP mit Tomaten, Basilikum und Zwiebeln", "en": "Buffalo mozzarella DOP with tomato, basil and onion", "p": "11,50"}, {"n": "Burrata e Bresaola della Valtellina", "de": "Burrata mit luftgetrockneter Rinderbresaola aus dem Veltlin", "en": "Burrata with air-dried Valtellina beef bresaola", "p": "12,00"}, {"n": "Mozzarella alla Griglia", "de": "Gegrillter Mozzarella mit Parmaschinken auf Rucola und Balsamicocreme", "en": "Grilled mozzarella with Parma ham on rocket and balsamic glaze", "p": "12,00"}, {"n": "Vitello Tonnato", "de": "Hauchdünnes Kalbsfilet in würziger Thunfischsauce", "en": "Thinly sliced veal in a savoury tuna sauce", "p": "13,50"}, {"n": "Carpaccio di Manzo", "de": "Rinderscheiben mit Rucola und Parmesan", "en": "Beef carpaccio with rocket and parmesan", "p": "14,50"}, {"n": "Antipasti Classico", "de": "Gemischter Vorspeisenteller", "en": "Mixed appetiser platter", "p": "15,90"}]}, {"id": "formaggi", "it": "Formaggi", "de": "Käse", "en": "Cheese", "meta": {}, "two": false, "wine": false, "items": [{"n": "Gorgonzola", "de": "", "en": "", "p": "6,90"}, {"n": "Grana Padano", "de": "", "en": "", "p": "6,90"}, {"n": "Pecorino", "de": "", "en": "", "p": "6,90"}]}, {"id": "zuppe", "it": "Zuppe", "de": "Suppen", "en": "Soups", "meta": {}, "two": false, "wine": false, "items": [{"n": "Zuppa di Pesce ERA", "de": "Hausgemachte Fischsuppe", "en": "House fish soup", "p": "14,00"}, {"n": "Zuppa di Pomodoro", "de": "Tomatensuppe", "en": "Tomato soup", "p": "7,00"}, {"n": "Zuppa Minestrone", "de": "Suppe mit erlesenem Gemüse", "en": "Soup with fine seasonal vegetables", "p": "9,00"}]}, {"id": "insalate", "it": "Insalate", "de": "Salate", "en": "Salads", "meta": {}, "two": false, "wine": false, "items": [{"n": "Insalata Mista di Stagione", "de": "Gemischter Salat der Saison", "en": "Mixed seasonal salad", "p": "7,00"}, {"n": "Insalata ERA", "de": "Rucola mit Cherrytomaten, roten Zwiebeln und Parmesan", "en": "Rocket with cherry tomato, red onion and parmesan", "p": "10,00"}, {"n": "Insalata Nostromo", "de": "Saisonsalat mit Thunfisch, Oliven und roten Zwiebeln", "en": "Seasonal salad with tuna, olives and red onion", "p": "14,00"}, {"n": "Insalata di Rucola con Formaggio di Capra", "de": "Rucola mit gebratenem Ziegenkäse, Nüssen und Honig", "en": "Rocket with roasted goat cheese, nuts and honey", "p": "17,00"}, {"n": "Insalata Tuli", "de": "Gegrillte Hühnerbrust mit Zwiebeln auf Salatkombination", "en": "Grilled chicken breast with onion on a salad medley", "p": "17,00"}, {"n": "Insalata Scozzese", "de": "Gegrillte Hühnerbrust auf Salatkombination mit frischem Obst", "en": "Grilled chicken breast on a salad medley with fresh fruit", "p": "17,00"}]}, {"id": "pizza", "it": "Pizza", "de": "Pizza", "en": "Pizza", "meta": {}, "two": false, "wine": false, "items": [{"n": "Margherita", "de": "Tomaten, Mozzarella, Basilikum", "en": "Tomato, mozzarella, basil", "p": "10,00"}, {"n": "Tuli", "de": "Tomaten, Mozzarella, scharfe Rindersalami, Cherrytomaten", "en": "Tomato, mozzarella, spicy beef salami, cherry tomato", "p": "12,00"}, {"n": "Funghi", "de": "Tomaten, Mozzarella, Champignons", "en": "Tomato, mozzarella, mushrooms", "p": "12,00"}, {"n": "Era", "de": "Mozzarella mit frischem Gemüse (vegetarisch)", "en": "Mozzarella with fresh vegetables (vegetarian)", "p": "12,00"}, {"n": "Braccio di Ferro", "de": "Tomaten, Mozzarella, Spinat, Knoblauch und Ei", "en": "Tomato, mozzarella, spinach, garlic and egg", "p": "13,00"}, {"n": "Prosciutto", "de": "Tomaten, Mozzarella, Schinken", "en": "Tomato, mozzarella, ham", "p": "13,00"}, {"n": "Milano", "de": "Tomaten, Mozzarella, Salami", "en": "Tomato, mozzarella, salami", "p": "13,00"}, {"n": "Calzone Classico", "de": "Tomaten, Mozzarella, Schinken, Champignons", "en": "Tomato, mozzarella, ham, mushrooms", "p": "13,00"}, {"n": "Contadina", "de": "Tomaten, Mozzarella, Schinken, Champignons", "en": "Tomato, mozzarella, ham, mushrooms", "p": "13,00"}, {"n": "Parmigiana", "de": "Tomaten, Mozzarella, Aubergine, Parmesan, Basilikum", "en": "Tomato, mozzarella, aubergine, parmesan, basil", "p": "13,00"}, {"n": "Napoletana", "de": "Tomaten, Mozzarella, Kapern, Sardellen", "en": "Tomato, mozzarella, capers, anchovies", "p": "13,00"}, {"n": "Tonno", "de": "Tomaten, Mozzarella, Thunfisch, rote Zwiebeln", "en": "Tomato, mozzarella, tuna, red onion", "p": "13,00"}, {"n": "Parma", "de": "Tomaten, Mozzarella, Parmaschinken, Rucola, Parmesan", "en": "Tomato, mozzarella, Parma ham, rocket, parmesan", "p": "13,00"}, {"n": "Capricciosa", "de": "Tomaten, Mozzarella, Champignons, Schinken, Artischocken, Oliven", "en": "Tomato, mozzarella, mushrooms, ham, artichoke, olives", "p": "15,00"}, {"n": "Diavola", "de": "Tomaten, Mozzarella, scharfe Salami", "en": "Tomato, mozzarella, spicy salami", "p": "14,00"}, {"n": "Waikiki", "de": "Tomaten, Mozzarella, Schinken, Ananas", "en": "Tomato, mozzarella, ham, pineapple", "p": "14,00"}, {"n": "Le 4 Stagioni", "de": "Tomaten, Mozzarella, Salami, Schinken, Artischocken, Champignons", "en": "Tomato, mozzarella, salami, ham, artichoke, mushrooms", "p": "14,00"}, {"n": "Quattro Formaggi", "de": "Tomaten, Mozzarella, Gorgonzola, Grana Padano, Scamorza", "en": "Tomato, mozzarella, gorgonzola, Grana Padano, scamorza", "p": "14,00"}, {"n": "Scandinavia", "de": "Tomaten, Mozzarella, Rucola und geräucherter Lachs", "en": "Tomato, mozzarella, rocket and smoked salmon", "p": "16,00"}, {"n": "Gustosa", "de": "Tomaten, Mozzarella, Parmaschinken, Rucola, Parmesan, Cherrytomaten", "en": "Tomato, mozzarella, Parma ham, rocket, parmesan, cherry tomato", "p": "15,00"}, {"n": "La Bianca", "de": "Mozzarella, Burrata, Bresaola und Cherrytomaten", "en": "Mozzarella, burrata, bresaola and cherry tomato", "p": "17,00"}, {"n": "Pizza Pane", "de": "Pizzabrot weiß mit Öl und Rosmarin", "en": "White pizza bread with oil and rosemary", "p": "6,00"}, {"n": "Pizza Rossa", "de": "Pizzabrot rot mit Cherrytomaten, Öl und Oregano", "en": "Red pizza bread with cherry tomato, oil and oregano", "p": "6,00"}]}, {"id": "per-i-pi-piccoli", "it": "Per i più piccoli", "de": "Für Kinder", "en": "For Kids", "meta": {}, "two": false, "wine": false, "items": [{"n": "Pizza Peperoni", "de": "Margherita oder mit Salami", "en": "Margherita or with salami", "p": "5,00"}, {"n": "Mickey Maus", "de": "Spaghetti mit leckerer Fleischsauce", "en": "Spaghetti with tasty meat sauce", "p": "5,00"}, {"n": "Portion Pommes", "de": "Pommes frites", "en": "Portion of fries", "p": "3,00"}]}, {"id": "pasta-und-risotto", "it": "Pasta & Risotto", "de": "Pasta & Risotto", "en": "Pasta & Risotto", "meta": {}, "two": false, "wine": false, "items": [{"n": "Spaghetti alla Bolognese", "de": "Mit Fleischsauce", "en": "With meat sauce", "p": "12,50"}, {"n": "Spaghetti Pomodoro e Basilico", "de": "Mit Tomatensauce und Basilikum", "en": "With tomato sauce and basil", "p": "10,00"}, {"n": "Spaghetti della Casa", "de": "Champignons, Spinat, Rinderfiletstreifen, frische Tomatensauce, Basilikum", "en": "Mushrooms, spinach, beef fillet strips, fresh tomato sauce, basil", "p": "13,00"}, {"n": "Spaghetti Aglio, Olio e Peperoncino", "de": "Mit Öl, Knoblauch und Peperoncino", "en": "With oil, garlic and chilli", "p": "11,00"}, {"n": "Spaghetti Carbonara", "de": "Mit Ei und Speck", "en": "With egg and pancetta", "p": "14,00"}, {"n": "Penne ai 4 Formaggi", "de": "Sauce aus vier Käsesorten, überbacken", "en": "Four-cheese sauce, oven-baked", "p": "12,00"}, {"n": "Penne all'Arrabbiata", "de": "Knoblauch, Petersilie, Peperoncino und frische Tomatensauce", "en": "Garlic, parsley, chilli and fresh tomato sauce", "p": "12,00"}, {"n": "Rigatoni all'Amatriciana", "de": "Mit italienischem Speck in pikanter Tomatensauce", "en": "With Italian pancetta in a spicy tomato sauce", "p": "12,00"}, {"n": "Tortellini Prosciutto e Panna", "de": "Mit Schinken, Parmesan und Sahnesauce", "en": "With ham, parmesan and cream sauce", "p": "12,00"}, {"n": "Gnocchi Gorgonzola e Spinaci", "de": "Mit Gorgonzola und Spinat", "en": "With gorgonzola and spinach", "p": "12,00"}, {"n": "Tagliatelle al Salmone", "de": "Mit Lachs in leichter Tomaten-Sahnesauce", "en": "With salmon in a light tomato-cream sauce", "p": "17,00"}, {"n": "Tagliatelle Mare e Monti", "de": "Lachs, Garnelen, Champignons, Zucchini, leichte Tomatensauce", "en": "Salmon, prawns, mushrooms, courgette, light tomato sauce", "p": "17,00"}, {"n": "Pasta alla Forma di Parmigiano", "de": "Tagliolini im Parmesanlaib auf Steinpilzen mit Trüffelöl", "en": "Tagliolini tossed in a parmesan wheel on porcini with truffle oil", "p": "18,00"}, {"n": "Risotto allo Scoglio", "de": "Garnelen, Miesmuscheln, Kalmare, Cherrytomaten, leichte Weißweinsauce", "en": "Prawns, mussels, squid, cherry tomato, light white-wine sauce", "p": "18,00"}, {"n": "Lasagne Emiliane al Forno", "de": "Schichtnudeln mit Bolognese, Béchamel, mit Mozzarella überbacken", "en": "Layered pasta with bolognese, béchamel, baked with mozzarella", "p": "13,00"}]}, {"id": "carne", "it": "Carne", "de": "Fleischgerichte", "en": "Meat", "meta": {}, "two": false, "wine": false, "items": [{"n": "Scaloppine Napoli", "de": "Filetstreifen mit Schinken und Mozzarella in Tomatensauce, mit Penne", "en": "Fillet strips with ham and mozzarella in tomato sauce, with penne", "p": "19,90"}, {"n": "Misto alla Griglia", "de": "Rumpsteak vom Grill mit Kräuterbutter, Rosmarinkartoffeln und Salat", "en": "Grilled rump steak with herb butter, rosemary potatoes and salad", "p": "24,90"}, {"n": "Filetto al Pepe Verde", "de": "Mit Rosmarinkartoffeln und Brokkoli", "en": "With rosemary potatoes and broccoli", "p": "19,90"}, {"n": "Saltimbocca alla Romana", "de": "Kalbsmedaillons mit Parmaschinken und Salbei in Weißweinsauce", "en": "Veal medallions with Parma ham and sage in white-wine sauce", "p": "24,90"}]}, {"id": "pesce", "it": "Pesce", "de": "Fischgerichte", "en": "Fish", "meta": {}, "two": false, "wine": false, "items": [{"n": "Salmone alla Griglia", "de": "Gegrilltes Lachsfilet mit frischen Kräutern", "en": "Grilled salmon fillet with fresh herbs", "p": "22,00"}, {"n": "Orata alla Griglia Royal", "de": "Gegrillte Dorade Royal", "en": "Grilled royal sea bream", "p": "24,00"}]}, {"id": "dolci", "it": "Dolci", "de": "Desserts", "en": "Desserts", "meta": {}, "two": false, "wine": false, "items": [{"n": "Tiramisù Classico al Caffè", "de": "", "en": "", "p": "6,00"}, {"n": "Panna Cotta", "de": "", "en": "", "p": "6,00"}, {"n": "Soufflé al Cioccolato", "de": "Schokoladensoufflé mit frischen Erdbeeren", "en": "Chocolate soufflé with fresh strawberries", "p": "6,00"}, {"n": "Sorbetto al Limone", "de": "Zitroneneis mit Wodka und Prosecco", "en": "Lemon sorbet with vodka and prosecco", "p": "6,00"}]}, {"id": "coppe-di-gelato", "it": "Coppe di Gelato", "de": "Eisbecher", "en": "Ice Cream", "meta": {}, "two": false, "wine": false, "items": [{"n": "Coppa Fragola", "de": "3 Kugeln (1 Vanille, 2 Erdbeere) mit Schlagsahne", "en": "3 scoops (1 vanilla, 2 strawberry) with cream", "p": "8,00"}, {"n": "Coppa Mango", "de": "2 Kugeln Mango, 1 Vanille mit Schlagsahne", "en": "2 scoops mango, 1 vanilla with cream", "p": "8,00"}, {"n": "Coppa Cioccolato", "de": "2 Kugeln Schoko, 1 Vanille mit Schlagsahne", "en": "2 scoops chocolate, 1 vanilla with cream", "p": "8,00"}, {"n": "Coppa Banana", "de": "Banane, Schoko und Vanille mit Schlagsahne", "en": "Banana, chocolate and vanilla with cream", "p": "8,00"}, {"n": "Coppa Bimbi", "de": "Kinderbecher mit Smarties, 2 Kugeln mit Schlagsahne", "en": "Kids' cup with Smarties, 2 scoops with cream", "p": "4,00"}]}, {"id": "caffetteria", "it": "Caffetteria", "de": "Heißgetränke", "en": "Hot Drinks", "meta": {}, "two": true, "wine": false, "items": [{"n": "Espresso", "de": "", "en": "", "p": "2,50"}, {"n": "Espresso Macchiato", "de": "", "en": "", "p": "2,90"}, {"n": "Espresso Doppio", "de": "", "en": "", "p": "2,90"}, {"n": "Espresso Corretto Grappa", "de": "", "en": "", "p": "3,90"}, {"n": "Espresso Decaffeinato", "de": "Ohne Koffein", "en": "Decaffeinated", "p": "2,50"}, {"n": "Caffè", "de": "", "en": "", "p": "2,90"}, {"n": "Cappuccino all'Italiana", "de": "", "en": "", "p": "2,90"}, {"n": "Latte Macchiato", "de": "", "en": "", "p": "3,90"}, {"n": "Cioccolata Calda", "de": "Heiße Schokolade", "en": "Hot chocolate", "p": "3,90"}, {"n": "Tè", "de": "Kamille, Pfefferminz, Red Berries, Orange-Vanille, Schwarz, Grün u.a.", "en": "Camomile, peppermint, red berries, orange-vanilla, black, green & more", "p": "2,90"}]}, {"id": "analcolici", "it": "Analcolici", "de": "Alkoholfreie Getränke", "en": "Soft Drinks", "meta": {}, "two": true, "wine": false, "items": [{"n": "S. Pellegrino frizzante", "de": "0,25 l / 0,75 l", "en": "0.25 l / 0.75 l", "p": "2,50 / 5,90"}, {"n": "Acqua Panna naturale", "de": "0,25 l / 0,75 l", "en": "0.25 l / 0.75 l", "p": "2,50 / 5,90"}, {"n": "Spezi", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 3,50"}, {"n": "Coca-Cola", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 3,50"}, {"n": "Coca-Cola Zero", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 3,50"}, {"n": "Fanta", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 3,50"}, {"n": "Sprite", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 3,50"}, {"n": "Schweppes Bitter Lemon", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 4,50"}, {"n": "Schweppes Tonic Water", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 4,50"}, {"n": "Schweppes Ginger Ale", "de": "0,2 l / 0,4 l", "en": "0.2 l / 0.4 l", "p": "2,50 / 4,50"}, {"n": "Spremuta d'Arancia", "de": "Frisch gepresst · 0,2 l / 0,4 l", "en": "Freshly squeezed · 0.2 l / 0.4 l", "p": "4,50 / 6,50"}, {"n": "Bionade al Sambuco", "de": "Holunder · 0,2 l / 0,4 l", "en": "Elderflower · 0.2 l / 0.4 l", "p": "3,00 / 5,50"}]}, {"id": "succhi-und-schorle", "it": "Succhi & Schorle", "de": "Säfte & Schorle", "en": "Juices & Spritzers", "meta": {"de": "je 0,2 l / 0,4 l", "en": "each 0.2 l / 0.4 l"}, "two": true, "wine": false, "items": [{"n": "Succo di Banana", "de": "Bananensaft", "en": "Banana", "p": "2,90 / 4,90"}, {"n": "Succo di Ciliegia", "de": "Kirschsaft", "en": "Cherry", "p": "2,90 / 4,90"}, {"n": "Succo di Mela", "de": "Apfelsaft", "en": "Apple", "p": "2,90 / 4,90"}, {"n": "Succo di Fragola", "de": "Erdbeersaft", "en": "Strawberry", "p": "2,90 / 4,90"}, {"n": "KiBa", "de": "Kirsch-Banane", "en": "Cherry-banana", "p": "2,90 / 4,90"}, {"n": "Succo d'Arancia", "de": "Orangensaft", "en": "Orange", "p": "2,90 / 4,90"}, {"n": "Succo di Rabarbaro", "de": "Rhabarbersaft", "en": "Rhubarb", "p": "2,90 / 4,90"}, {"n": "Schorle", "de": "Apfel · Kirsch · Erdbeer · Orange", "en": "Apple · cherry · strawberry · orange", "p": "2,90 / 4,90"}]}, {"id": "birre", "it": "Birre", "de": "Biere", "en": "Beers", "meta": {}, "two": true, "wine": false, "items": [{"n": "Ur-Krostitzer vom Fass", "de": "0,3 l / 0,5 l", "en": "0.3 l / 0.5 l", "p": "3,90 / 4,50"}, {"n": "Krombacher alkoholfrei", "de": "Fl. 0,33 l", "en": "Bottle 0.33 l", "p": "2,90"}, {"n": "Krombacher Weißbier dunkel", "de": "Fl. 0,5 l", "en": "Bottle 0.5 l", "p": "4,50"}, {"n": "Franziskaner Weißbier Kristall", "de": "Fl. 0,5 l", "en": "Bottle 0.5 l", "p": "4,50"}, {"n": "Köstritzer Schwarzbier", "de": "Fl. 0,33 l", "en": "Bottle 0.33 l", "p": "2,90"}, {"n": "Köstritzer Weißbier alkoholfrei", "de": "Fl. 0,5 l", "en": "Bottle 0.5 l", "p": "4,50"}, {"n": "Diesel", "de": "Bier und Cola · 0,3 l / 0,5 l", "en": "Beer and cola · 0.3 l / 0.5 l", "p": "3,90 / 4,50"}, {"n": "Radler", "de": "Bier und Sprite · 0,3 l / 0,5 l", "en": "Beer and Sprite · 0.3 l / 0.5 l", "p": "3,90 / 4,50"}]}, {"id": "aperitivi", "it": "Aperitivi", "de": "Aperitifs", "en": "Aperitifs", "meta": {}, "two": true, "wine": false, "items": [{"n": "Martini Bianco / Rosso / Extra Dry", "de": "5 cl", "en": "5 cl", "p": "4,50"}, {"n": "Spritz", "de": "Aperol, Prosecco, Soda · 0,2 l", "en": "Aperol, prosecco, soda · 0.2 l", "p": "7,50"}, {"n": "Limonella", "de": "Limonella, Prosecco, Soda · 5 cl", "en": "Limoncello, prosecco, soda · 5 cl", "p": "7,50"}, {"n": "Negroni", "de": "Campari, Gin, Martini Rosso · 0,1 l", "en": "Campari, gin, Martini Rosso · 0.1 l", "p": "6,50"}, {"n": "Lillet Wild Berry", "de": "Lillet, Schweppes Wild Berry, Beeren · 5 cl", "en": "Lillet, Schweppes Wild Berry, berries · 5 cl", "p": "7,50"}, {"n": "Cherry Dry", "de": "0,2 l", "en": "0.2 l", "p": "4,50"}, {"n": "Hugo", "de": "0,2 l", "en": "0.2 l", "p": "6,50"}, {"n": "Prosecco D.O.C.", "de": "0,1 l", "en": "0.1 l", "p": "3,90"}, {"n": "Crodino Milano", "de": "Alkoholfreier Aperitif · 0,1 l", "en": "Non-alcoholic aperitif · 0.1 l", "p": "3,90"}, {"n": "Campari", "de": "Orange / Soda · 4 cl", "en": "Orange / soda · 4 cl", "p": "8,50"}]}, {"id": "vini-al-calice", "it": "Vini al Calice", "de": "Offene Weine", "en": "Wine by the Glass", "meta": {"de": "0,2 l", "en": "0.2 l"}, "two": true, "wine": false, "items": [{"n": "Pinot Grigio IGT", "de": "Veneto", "en": "Veneto", "p": "6,00"}, {"n": "Lambrusco Amabile", "de": "Emilia-Romagna", "en": "Emilia-Romagna", "p": "6,00"}, {"n": "Nero d'Avola IGT", "de": "Sizilien", "en": "Sicily", "p": "6,00"}, {"n": "Rosé DOC", "de": "Veneto", "en": "Veneto", "p": "6,00"}, {"n": "Frizzantino lieblich", "de": "0,2 l", "en": "0.2 l", "p": "6,00"}, {"n": "Weinschorle", "de": "Weiß / Rot / Rosé", "en": "White / red / rosé", "p": "6,00"}]}, {"id": "cocktail", "it": "Cocktail", "de": "Cocktails & Longdrinks", "en": "Cocktails & Long Drinks", "meta": {}, "two": true, "wine": false, "items": [{"n": "Capo Tonic", "de": "Amaro del Capo, Tonic, Limette, Orange", "en": "Amaro del Capo, tonic, lime, orange", "p": "9,00"}, {"n": "Cuba Libre", "de": "Weißer Rum, Cola, Limette", "en": "White rum, cola, lime", "p": "9,00"}, {"n": "Beefeater Gin Tonic", "de": "", "en": "", "p": "9,00"}, {"n": "Ballantine's Cola", "de": "", "en": "", "p": "9,00"}, {"n": "Absolut Wodka Lemon", "de": "", "en": "", "p": "9,00"}, {"n": "Caipirinha", "de": "Cachaça, Rohrzucker, Limette", "en": "Cachaça, cane sugar, lime", "p": "9,00"}, {"n": "Beefeater Gin Lemon", "de": "", "en": "", "p": "9,00"}, {"n": "Mojito", "de": "Rum, Minze, Rohrzucker, Limette, Soda", "en": "Rum, mint, cane sugar, lime, soda", "p": "9,00"}]}, {"id": "spumanti-und-champagne", "it": "Spumanti & Champagne", "de": "Sekt & Champagner", "en": "Sparkling & Champagne", "meta": {"de": "Flasche", "en": "Bottle"}, "two": false, "wine": false, "items": [{"n": "Prosecco D.O.C. Extra Dry", "de": "Rivette, Treviso", "en": "Rivette, Treviso", "p": "17,50"}, {"n": "Prosecco Superiore D.O.C.G.", "de": "Conegliano Valdobbiadene – Rivette, Treviso", "en": "Conegliano Valdobbiadene – Rivette, Treviso", "p": "21,00"}, {"n": "Wildbacher Brut Rosé VSQ", "de": "Col Sandago, Treviso", "en": "Col Sandago, Treviso", "p": "24,50"}, {"n": "Metodo Classico Wildbacher Rosé Extra Brut", "de": "Col Sandago, Treviso", "en": "Col Sandago, Treviso", "p": "45,50"}, {"n": "Martin Orsyn Brut Tradition", "de": "Champagne", "en": "Champagne", "p": "94,00"}, {"n": "Martin Orsyn Brut Rosé", "de": "Champagne", "en": "Champagne", "p": "117,00"}, {"n": "Martin Orsyn Extra Brut Grande Réserve", "de": "Champagne", "en": "Champagne", "p": "123,50"}]}, {"id": "vini-bianchi", "it": "Vini Bianchi", "de": "Weißweine", "en": "White Wines", "meta": {"de": "Flasche", "en": "Bottle"}, "two": true, "wine": false, "items": [{"n": "Bianco Col Sandago I.G.T.", "de": "Chardonnay/Manzoni, Veneto", "en": "Chardonnay/Manzoni, Veneto", "p": "18,50"}, {"n": "Weissburgunder D.O.C.", "de": "St. Pauls, Südtirol", "en": "St. Pauls, South Tyrol", "p": "24,90"}, {"n": "Chardonnay D.O.C.", "de": "St. Pauls, Südtirol", "en": "St. Pauls, South Tyrol", "p": "24,90"}, {"n": "Passerina Costa Croce I.G.T.", "de": "Torre Zambra, Abruzzen", "en": "Torre Zambra, Abruzzo", "p": "25,90"}, {"n": "Pinot Grigio D.O.C.", "de": "St. Pauls, Südtirol", "en": "St. Pauls, South Tyrol", "p": "26,90"}, {"n": "Sauvignon D.O.C.", "de": "St. Pauls, Südtirol", "en": "St. Pauls, South Tyrol", "p": "26,90"}, {"n": "Traminer Aromatico D.O.C.", "de": "La Bellanotte, Friaul-Julisch Venetien", "en": "La Bellanotte, Friuli-Venezia Giulia", "p": "26,90"}, {"n": "Pecorino Poggio Salaia I.G.T.", "de": "Torre Zambra, Abruzzen", "en": "Torre Zambra, Abruzzo", "p": "28,00"}, {"n": "Lugana I Frati D.O.C.", "de": "Ca' dei Frati, Lombardei", "en": "Ca' dei Frati, Lombardy", "p": "37,90"}]}, {"id": "vini-rosati", "it": "Vini Rosati", "de": "Roséweine", "en": "Rosé Wines", "meta": {"de": "Flasche", "en": "Bottle"}, "two": false, "wine": false, "items": [{"n": "Riviera del Garda Classico D.O.C.", "de": "Groppello, Sangiovese, Marzemino, Barbera – Lombardei", "en": "Groppello, Sangiovese, Marzemino, Barbera – Lombardy", "p": "28,00"}, {"n": "Rosa dei Frati", "de": "Ca' dei Frati, Lombardei", "en": "Ca' dei Frati, Lombardy", "p": "39,90"}]}, {"id": "vini-rossi", "it": "Vini Rossi", "de": "Rotweine", "en": "Red Wines", "meta": {"de": "Flasche", "en": "Bottle"}, "two": true, "wine": true, "items": [{"n": "Rosso Col Sandago I.G.T.", "de": "Merlot/Marzemino, Veneto", "en": "Merlot/Marzemino, Veneto", "p": "19,90"}, {"n": "Cabernet Franc", "de": "", "en": "", "p": "22,90"}, {"n": "Chianti Classico D.O.C.G.", "de": "Il Palazzo, Toskana", "en": "Il Palazzo, Tuscany", "p": "22,90"}, {"n": "Merlot La Bellanotte", "de": "", "en": "", "p": "22,90"}, {"n": "Amarai Vini Rosso", "de": "Barbera, Pinot Nero, Dolcetto, Freisa – Piemont", "en": "Barbera, Pinot Noir, Dolcetto, Freisa – Piedmont", "p": "20,90"}, {"n": "Dolcetto d'Alba «Alessandro II» D.O.C.", "de": "Serragrilli, Piemont", "en": "Serragrilli, Piedmont", "p": "23,90"}, {"n": "Negroamaro delle Caselle D.O.P.", "de": "Apulien", "en": "Puglia", "p": "29,90"}, {"n": "Primitivo «Cinquenoci» I.G.P.", "de": "Tagaro, Apulien", "en": "Tagaro, Puglia", "p": "25,90"}, {"n": "Nero d'Avola «Neero» I.G.P.", "de": "Feudo Maccari, Sizilien", "en": "Feudo Maccari, Sicily", "p": "26,90"}, {"n": "Camoi I.G.T. delle Venezie", "de": "Merlot, Col Sandago, Treviso", "en": "Merlot, Col Sandago, Treviso", "p": "25,90"}, {"n": "Nero di Troia «Spatus» I.G.P.", "de": "Tagaro, Apulien", "en": "Tagaro, Puglia", "p": "25,90"}, {"n": "Valpolicella Ripasso D.O.P.", "de": "Corvina, Rondinella, Molinara – Veneto", "en": "Corvina, Rondinella, Molinara – Veneto", "p": "30,90"}, {"n": "Wildbacher I.G.T. Colli Trevigiani", "de": "Col Sandago, Veneto", "en": "Col Sandago, Veneto", "p": "46,90"}, {"n": "Barolo La Tur D.O.C.G.", "de": "Nebbiolo, Serragrilli, Piemont", "en": "Nebbiolo, Serragrilli, Piedmont", "p": "82,90"}]}];
+const UI = {"de": {"eyebrow": "La Carta", "title": "Speisekarte", "lead": "Authentische italienische Küche — hausgemachte Pasta, Steinofenpizza, italienische Weine. Alle Preise in Euro, inkl. MwSt.", "wine_note": "Nach unseren Wein-Spezialitäten fragen Sie gerne unser Servicepersonal.", "alg": "Angaben zu Allergenen und Zusatzstoffen erhalten Sie auf Anfrage.", "back": "Zurück zur Startseite", "reserve": "Tisch reservieren"}, "en": {"eyebrow": "La Carta", "title": "Menu", "lead": "Authentic Italian cuisine — homemade pasta, stone-oven pizza, Italian wines. All prices in euro, incl. VAT.", "wine_note": "Please ask our staff about our wine specialities.", "alg": "Information on allergens and additives available on request.", "back": "Back to home", "reserve": "Reserve a table"}};
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function curLang(){return localStorage.getItem("era_lang")||"de";}
+function renderMenu(){
+  const L = curLang();
+  const u = UI[L];
+  // hero + static bits
+  document.querySelectorAll("[data-mui]").forEach(el=>{el.innerHTML=u[el.getAttribute("data-mui")];});
+  document.documentElement.lang = L;
+  // category nav
+  const nav = document.getElementById("catNav");
+  nav.innerHTML = MENU.map(s=>`<a href="#${s.id}">${esc(s[L])}</a>`).join("");
+  // body
+  const body = document.getElementById("menuBody");
+  body.innerHTML = MENU.map(s=>{
+    const sub = (s.it && s.it!==s[L]) ? `<span class="ital">${esc(s.it)}</span>` : "";
+    const meta = (s.meta && s.meta[L]) ? `<div class="mmeta">${esc(s.meta[L])}</div>` : "";
+    const note = s.wine ? `<div class="mnote">${esc(u.wine_note)}</div>` : "";
+    const items = s.items.map(it=>{
+      const d = it[L] ? `<div class="ds">${esc(it[L])}</div>` : "";
+      const p = it.p ? `<span class="pr">${esc(it.p)} €</span>` : "";
+      return `<div class="mitem"><div class="row"><span class="nm">${esc(it.n)}</span>`
+           + `<span class="dot"></span>${p}</div>${d}</div>`;
+    }).join("");
+    return `<section class="msec${s.two?" two":""}" id="${s.id}">`
+         + `<div class="msec-head"><h2>${esc(s[L])}</h2>${sub}</div>${meta}`
+         + `<div class="mitems">${items}</div>${note}</section>`;
+  }).join("");
+  document.querySelectorAll(".menu-foot .alg").forEach(el=>el.textContent=u.alg);
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  renderMenu();
+  document.querySelectorAll(".lang-toggle button").forEach(b=>
+    b.addEventListener("click",()=>setTimeout(renderMenu,0)));
+});
+</script>
+<script>var y=document.getElementById("year"); if(y) y.textContent=new Date().getFullYear();</script>
+</body>
+</html>
